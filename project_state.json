@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Website for selling natural food colour named Whisk and Bloom",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Natural food colour hero background with vibrant botanical elements and food preparations (hero-background.dim_1920x1080.png)\n- Whisk and Bloom logo with elegant botanical design (logo.dim_400x400.png)\n- Red natural food colour product image showing vibrant beetroot-based colour (product-red.dim_800x800.png)\n- Yellow natural food colour product image showing turmeric-based colour (product-yellow.dim_800x800.png)\n- Blue natural food colour product image showing butterfly pea-based colour (product-blue.dim_800x800.png)\n- Green natural food colour product image showing spirulina-based colour (product-green.dim_800x800.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-homepage-that-showcases-whisk-and-bloom-as-a-natural-food-colour-brand-with-a-hero-section-product-highlights-and-brand-story",
+      "title": "Create a homepage that showcases Whisk and Bloom as a natural food colour brand with a hero section, product highlights, and brand story",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-product-catalog-page-displaying-natural-food-colour-products-with-images-names-descriptions-and-prices",
+      "title": "Implement a product catalog page displaying natural food colour products with images, names, descriptions, and prices",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-shopping-cart-system-that-allows-users-to-add-products-view-cart-contents-and-see-total-price",
+      "title": "Create a shopping cart system that allows users to add products, view cart contents, and see total price",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-checkout-flow-where-users-can-review-their-order-and-complete-purchase",
+      "title": "Implement a checkout flow where users can review their order and complete purchase",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-cohesive-visual-theme-inspired-by-natural-organic-food-aesthetics-with-warm-earth-tones-botanical-elements-and-clean-modern-typography-that-emphasizes-the-natural-and-artisanal-quality-of-the-food-colours",
+      "title": "Design a cohesive visual theme inspired by natural, organic food aesthetics with warm earth tones, botanical elements, and clean modern typography that emphasizes the natural and artisanal quality of the food colours",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-an-individual-product-detail-page-showing-full-product-information-larger-images-and-add-to-cart-functionality",
+      "title": "Create an individual product detail page showing full product information, larger images, and add to cart functionality",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [],
+  "gameProjectType": "none",
+  "projectName": "Whisk and Bloom",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

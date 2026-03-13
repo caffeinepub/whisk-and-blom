@@ -1,0 +1,129 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-homepage-that-showcases-whisk-and-bloom-as-a-natural-food-colour-brand-with-a-hero-section-product-highlights-and-brand-story",
+      "featureTitle": "Create a homepage that showcases Whisk and Bloom as a natural food colour brand with a hero section, product highlights, and brand story",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/BrandStory.tsx",
+        "frontend/src/components/Hero.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/components/ProductHighlights.tsx",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-product-catalog-page-displaying-natural-food-colour-products-with-images-names-descriptions-and-prices",
+      "featureTitle": "Implement a product catalog page displaying natural food colour products with images, names, descriptions, and prices",
+      "files": [
+        "frontend/src/components/ProductCard.tsx",
+        "frontend/src/hooks/useProducts.ts",
+        "frontend/src/pages/ProductCatalog.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-shopping-cart-system-that-allows-users-to-add-products-view-cart-contents-and-see-total-price",
+      "featureTitle": "Create a shopping cart system that allows users to add products, view cart contents, and see total price",
+      "files": [
+        "frontend/src/components/CartIcon.tsx",
+        "frontend/src/components/CartItem.tsx",
+        "frontend/src/hooks/useCart.ts",
+        "frontend/src/pages/CartPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-checkout-flow-where-users-can-review-their-order-and-complete-purchase",
+      "featureTitle": "Implement a checkout flow where users can review their order and complete purchase",
+      "files": [
+        "frontend/src/components/OrderSummary.tsx",
+        "frontend/src/components/ShippingForm.tsx",
+        "frontend/src/pages/CheckoutPage.tsx",
+        "frontend/src/pages/OrderConfirmation.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-design-a-cohesive-visual-theme-inspired-by-natural-organic-food-aesthetics-with-warm-earth-tones-botanical-elements-and-clean-modern-typography-that-emphasizes-the-natural-and-artisanal-quality-of-the-food-colours",
+      "featureTitle": "Design a cohesive visual theme inspired by natural, organic food aesthetics with warm earth tones, botanical elements, and clean modern typography that emphasizes the natural and artisanal quality of the food colours",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-an-individual-product-detail-page-showing-full-product-information-larger-images-and-add-to-cart-functionality",
+      "featureTitle": "Create an individual product detail page showing full product information, larger images, and add to cart functionality",
+      "files": [
+        "frontend/src/components/QuantitySelector.tsx",
+        "frontend/src/hooks/useProduct.ts",
+        "frontend/src/pages/ProductDetailPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

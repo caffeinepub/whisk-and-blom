@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        /* Warm earth tones - Light mode */
+        --background: 0.98 0.01 45;  /* Warm cream */
+        --foreground: 0.25 0.02 35;  /* Deep brown */
+        --card: 1 0 0;  /* Pure white */
+        --card-foreground: 0.25 0.02 35;
+        --popover: 1 0 0;
+        --popover-foreground: 0.25 0.02 35;
+        --primary: 0.55 0.12 35;  /* Terracotta */
+        --primary-foreground: 0.98 0.01 45;
+        --secondary: 0.72 0.08 145;  /* Sage green */
+        --secondary-foreground: 0.25 0.02 35;
+        --muted: 0.94 0.01 45;  /* Light beige */
+        --muted-foreground: 0.50 0.02 35;
+        --accent: 0.78 0.10 75;  /* Soft amber */
+        --accent-foreground: 0.25 0.02 35;
+        --destructive: 0.55 0.20 25;
+        --destructive-foreground: 0.98 0.01 45;
+        --border: 0.88 0.02 45;
+        --input: 0.88 0.02 45;
+        --ring: 0.55 0.12 35;
+        --chart-1: 0.55 0.12 35;
+        --chart-2: 0.72 0.08 145;
+        --chart-3: 0.78 0.10 75;
+        --chart-4: 0.65 0.10 15;
+        --chart-5: 0.82 0.08 55;
+    }
+
+    .dark {
+        --background: 0.20 0.02 35;  /* Dark brown */
+        --foreground: 0.95 0.01 45;  /* Warm cream */
+        --card: 0.25 0.02 35;
+        --card-foreground: 0.95 0.01 45;
+        --popover: 0.25 0.02 35;
+        --popover-foreground: 0.95 0.01 45;
+        --primary: 0.65 0.12 35;  /* Lighter terracotta */
+        --primary-foreground: 0.98 0.01 45;
+        --secondary: 0.60 0.08 145;  /* Muted sage */
+        --secondary-foreground: 0.95 0.01 45;
+        --muted: 0.30 0.02 35;
+        --muted-foreground: 0.70 0.02 35;
+        --accent: 0.68 0.10 75;
+        --accent-foreground: 0.95 0.01 45;
+        --destructive: 0.60 0.20 25;
+        --destructive-foreground: 0.95 0.01 45;
+        --border: 0.35 0.02 35;
+        --input: 0.35 0.02 35;
+        --ring: 0.65 0.12 35;
+        --chart-1: 0.65 0.12 35;
+        --chart-2: 0.60 0.08 145;
+        --chart-3: 0.68 0.10 75;
+        --chart-4: 0.55 0.10 15;
+        --chart-5: 0.72 0.08 55;
+    }
+
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}

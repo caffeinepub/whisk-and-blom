@@ -1,0 +1,124 @@
+{
+  "kind": "build_request",
+  "title": "Create Whisk and Bloom natural food colour e-commerce website",
+  "projectName": "Whisk and Bloom",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a homepage that showcases Whisk and Bloom as a natural food colour brand with a hero section, product highlights, and brand story",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Homepage displays brand name 'Whisk and Bloom' prominently",
+        "Hero section includes compelling headline about natural food colours",
+        "Product highlights section is visible on homepage",
+        "Brand story or about section is present"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement a product catalog page displaying natural food colour products with images, names, descriptions, and prices",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Product catalog page is accessible from navigation",
+        "Each product shows image, name, description, and price",
+        "Products are stored in backend and retrieved for display",
+        "Product grid or list layout is responsive"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create a shopping cart system that allows users to add products, view cart contents, and see total price",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can add products to cart from product pages",
+        "Cart icon shows item count",
+        "Cart page displays all added items with quantities",
+        "Total price is calculated and displayed",
+        "Users can update quantities or remove items from cart"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement a checkout flow where users can review their order and complete purchase",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Checkout page shows order summary with items and total",
+        "User can enter shipping information",
+        "Order is saved to backend upon completion",
+        "Confirmation message is shown after successful checkout"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Design a cohesive visual theme inspired by natural, organic food aesthetics with warm earth tones, botanical elements, and clean modern typography that emphasizes the natural and artisanal quality of the food colours",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Color palette uses warm earth tones and natural hues",
+        "Typography is clean and modern",
+        "Visual elements convey organic and artisanal brand identity",
+        "Design is consistent across all pages"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Create an individual product detail page showing full product information, larger images, and add to cart functionality",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Product detail page is accessible by clicking on products",
+        "Displays larger product image",
+        "Shows complete product description and specifications",
+        "Includes add to cart button with quantity selector"
+      ]
+    }
+  ],
+  "constraints": [],
+  "nonGoals": [
+    "Real payment processing integration",
+    "User account creation and authentication beyond Internet Identity",
+    "Inventory management system",
+    "Order tracking and shipping integration",
+    "Email notifications"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Natural food colour hero background with vibrant botanical elements and food preparations (hero-background.dim_1920x1080.png)",
+      "Whisk and Bloom logo with elegant botanical design (logo.dim_400x400.png)",
+      "Red natural food colour product image showing vibrant beetroot-based colour (product-red.dim_800x800.png)",
+      "Yellow natural food colour product image showing turmeric-based colour (product-yellow.dim_800x800.png)",
+      "Blue natural food colour product image showing butterfly pea-based colour (product-blue.dim_800x800.png)",
+      "Green natural food colour product image showing spirulina-based colour (product-green.dim_800x800.png)"
+    ],
+    "edits": []
+  }
+}

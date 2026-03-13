@@ -1,0 +1,190 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Whisk and Bloom Natural Food Colour E-commerce Website - Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create homepage with hero section, product highlights, and brand story showcasing Whisk and Bloom natural food colour brand",
+      "acceptanceCriteria": [
+        "Homepage displays brand name 'Whisk and Bloom' prominently",
+        "Hero section includes compelling headline about natural food colours",
+        "Product highlights section is visible on homepage",
+        "Brand story or about section is present"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "create",
+          "description": "Create Hero component with brand name, compelling headline about natural food colours, and hero background image. Use the generated image frontend/public/assets/generated/hero-background.dim_1920x1080.png as the background. Include call-to-action button linking to products."
+        },
+        {
+          "path": "frontend/src/components/ProductHighlights.tsx",
+          "operation": "create",
+          "description": "Create ProductHighlights component that displays a curated selection of featured products with images, names, and prices. Fetch products using the backend getAllProducts method and display the first 4 products in a grid layout."
+        },
+        {
+          "path": "frontend/src/components/BrandStory.tsx",
+          "operation": "create",
+          "description": "Create BrandStory component that tells the Whisk and Bloom story, emphasizing natural ingredients, artisanal quality, and the mission to provide safe, vibrant food colours from botanical sources."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "create",
+          "description": "Create HomePage component that combines Hero, ProductHighlights, and BrandStory components in a cohesive layout. This serves as the main landing page for the website."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add routing configuration and navigation structure. Set up routes for HomePage (/), ProductCatalog (/products), ProductDetail (/products/:id), Cart (/cart), and Checkout (/checkout). Include navigation header with logo and cart icon."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "create",
+          "description": "Create Layout component that wraps all pages with consistent header navigation (including logo from frontend/public/assets/generated/logo.dim_400x400.png and cart icon) and footer. This ensures brand consistency across all pages."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement product catalog page displaying natural food colour products with images, names, descriptions, and prices",
+      "acceptanceCriteria": [
+        "Product catalog page is accessible from navigation",
+        "Each product shows image, name, description, and price",
+        "Products are stored in backend and retrieved for display",
+        "Product grid or list layout is responsive"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ProductCatalog.tsx",
+          "operation": "create",
+          "description": "Create ProductCatalog page that fetches all products from backend using getAllProducts method and displays them in a responsive grid layout. Each product card shows image, name, description snippet, and price. Cards are clickable and navigate to product detail pages. Wire generated product images: frontend/public/assets/generated/product-red.dim_800x800.png, frontend/public/assets/generated/product-yellow.dim_800x800.png, frontend/public/assets/generated/product-blue.dim_800x800.png, and frontend/public/assets/generated/product-green.dim_800x800.png as product images."
+        },
+        {
+          "path": "frontend/src/components/ProductCard.tsx",
+          "operation": "create",
+          "description": "Create reusable ProductCard component that displays a single product with image, name, price, and truncated description. Include hover effects and click handler to navigate to product detail page. Style using natural, organic aesthetics consistent with brand theme."
+        },
+        {
+          "path": "frontend/src/hooks/useProducts.ts",
+          "operation": "create",
+          "description": "Create useProducts hook that fetches products from backend using getAllProducts method, handles loading and error states, and returns product data for use in ProductCatalog and other components."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Create shopping cart system allowing users to add products, view cart contents, and see total price",
+      "acceptanceCriteria": [
+        "Users can add products to cart from product pages",
+        "Cart icon shows item count",
+        "Cart page displays all added items with quantities",
+        "Total price is calculated and displayed",
+        "Users can update quantities or remove items from cart"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/CartPage.tsx",
+          "operation": "create",
+          "description": "Create CartPage that fetches cart contents using viewCart backend method and displays all cart items with product images, names, quantities, individual prices, and total price from getCartTotal. Include quantity adjustment controls and remove item functionality. Show empty cart message when cart is empty with link back to products. Include proceed to checkout button."
+        },
+        {
+          "path": "frontend/src/components/CartIcon.tsx",
+          "operation": "create",
+          "description": "Create CartIcon component for navigation header that displays shopping cart icon with badge showing current item count. Cart count is calculated from viewCart data. Clicking icon navigates to CartPage."
+        },
+        {
+          "path": "frontend/src/components/CartItem.tsx",
+          "operation": "create",
+          "description": "Create CartItem component that displays a single cart item with product image, name, price, quantity selector, and remove button. Handle quantity updates by calling addToCart with new quantity. Include subtotal calculation for the item."
+        },
+        {
+          "path": "frontend/src/hooks/useCart.ts",
+          "operation": "create",
+          "description": "Create useCart hook that provides cart data and operations. Fetch cart contents using viewCart method, calculate item count, fetch total using getCartTotal, and provide functions to add items (addToCart), update quantities, and refresh cart. Handle loading and error states."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Implement checkout flow where users can review order and complete purchase",
+      "acceptanceCriteria": [
+        "Checkout page shows order summary with items and total",
+        "User can enter shipping information",
+        "Order is saved to backend upon completion",
+        "Confirmation message is shown after successful checkout"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/CheckoutPage.tsx",
+          "operation": "create",
+          "description": "Create CheckoutPage that displays order summary with cart items and total from backend methods. Include shipping information form with fields for name, address, city, postal code, and country. On form submission, show order confirmation. Include back to cart link and place order button."
+        },
+        {
+          "path": "frontend/src/components/OrderSummary.tsx",
+          "operation": "create",
+          "description": "Create OrderSummary component that displays cart items with quantities and prices, subtotal, and total. Reusable in both CartPage and CheckoutPage. Fetch data using viewCart and getCartTotal methods."
+        },
+        {
+          "path": "frontend/src/components/ShippingForm.tsx",
+          "operation": "create",
+          "description": "Create ShippingForm component with form fields for shipping information including name, street address, city, postal code, and country. Include form validation and submit handler. Style inputs using natural, organic theme consistent with brand identity."
+        },
+        {
+          "path": "frontend/src/pages/OrderConfirmation.tsx",
+          "operation": "create",
+          "description": "Create OrderConfirmation page that displays success message after checkout completion, order summary, and shipping details. Include continue shopping button linking back to product catalog."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Design cohesive visual theme with natural, organic food aesthetics using warm earth tones, botanical elements, and clean modern typography",
+      "acceptanceCriteria": [
+        "Color palette uses warm earth tones and natural hues",
+        "Typography is clean and modern",
+        "Visual elements convey organic and artisanal brand identity",
+        "Design is consistent across all pages"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define brand color palette using CSS custom properties with warm earth tones (terracotta, sage green, cream, natural brown, soft amber) and natural hues. Set up typography scale with clean, modern font families. Include base styles for organic, artisanal aesthetic. Apply botanical-inspired design tokens for spacing, borders, and shadows."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme with custom color palette for Whisk and Bloom brand including earth tones and natural hues. Configure typography with clean, modern font families. Add custom spacing and border radius values that support organic, flowing design aesthetic. Configure theme to support botanical and artisanal visual elements."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Create individual product detail page showing full product information, larger images, and add to cart functionality",
+      "acceptanceCriteria": [
+        "Product detail page is accessible by clicking on products",
+        "Displays larger product image",
+        "Shows complete product description and specifications",
+        "Includes add to cart button with quantity selector"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ProductDetailPage.tsx",
+          "operation": "create",
+          "description": "Create ProductDetailPage that fetches product data using getProduct backend method based on URL parameter. Display large product image, full name, complete description, price, and detailed information about the natural ingredients and uses. Include quantity selector and add to cart button that calls addToCart method. Show success feedback when item is added. Include back to products link and breadcrumb navigation."
+        },
+        {
+          "path": "frontend/src/components/QuantitySelector.tsx",
+          "operation": "create",
+          "description": "Create reusable QuantitySelector component with increment and decrement buttons and numeric input. Include minimum value of 1 and maximum value validation. Style with natural, organic aesthetic consistent with brand theme."
+        },
+        {
+          "path": "frontend/src/hooks/useProduct.ts",
+          "operation": "create",
+          "description": "Create useProduct hook that fetches individual product data using getProduct backend method with product ID parameter. Handle loading and error states. Return product data and refetch function."
+        }
+      ]
+    }
+  ]
+}

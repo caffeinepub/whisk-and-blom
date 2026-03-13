@@ -1,0 +1,80 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-19T10:58:59.068Z",
+  "summary": "The implementation covers all major requirements including homepage with hero and brand story, product catalog, shopping cart, checkout flow, and product detail pages. The design uses warm earth tones and botanical aesthetics. However, some acceptance criteria details are missing or cannot be fully verified from the truncated diff.",
+  "missing_requirements": [
+    {
+      "id": "REQ-3",
+      "requirement": "Users can update quantities in cart",
+      "reason": "QuantitySelector component exists and is used in CartItem, but the actual mutation/backend call to update cart quantities is not visible in the provided diff. The CartItem component has onUpdateQuantity prop but no backend update implementation is shown.",
+      "evidence": [
+        "frontend/src/components/CartItem.tsx",
+        "frontend/src/components/QuantitySelector.tsx"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "requirement": "Users can remove items from cart",
+      "reason": "CartItem has onRemove callback, but no backend mutation or implementation for removing items from the cart is visible in the provided code. The backend/main.mo does not show a removeFromCart function.",
+      "evidence": [
+        "frontend/src/components/CartItem.tsx",
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "requirement": "Order is saved to backend upon completion",
+      "reason": "No backend function for saving orders is present in backend/main.mo. The checkout flow exists in frontend but there is no corresponding backend endpoint to persist order data.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/pages/CheckoutPage.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Product image mapping dictionary with hardcoded paths",
+      "reason": "ProductCard and CartItem components include a productImageMap object mapping backend image names to frontend asset paths. This mapping layer was not requested and adds complexity not specified in requirements.",
+      "evidence": [
+        "frontend/src/components/ProductCard.tsx",
+        "frontend/src/components/CartItem.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.75,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/BrandStory.tsx",
+    "frontend/src/components/CartIcon.tsx",
+    "frontend/src/components/CartItem.tsx",
+    "frontend/src/components/Hero.tsx",
+    "frontend/src/components/Layout.tsx",
+    "frontend/src/components/OrderSummary.tsx",
+    "frontend/src/components/ProductCard.tsx",
+    "frontend/src/components/ProductHighlights.tsx",
+    "frontend/src/components/QuantitySelector.tsx",
+    "frontend/src/components/ShippingForm.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useCart.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useProduct.ts",
+    "frontend/src/hooks/useProducts.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/CartPage.tsx",
+    "frontend/src/pages/CheckoutPage.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/OrderConfirmation.tsx",
+    "frontend/src/pages/ProductCatalog.tsx",
+    "frontend/src/pages/ProductDetailPage.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}
